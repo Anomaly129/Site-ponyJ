@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Форма</title></head>
+<body><a id="top"></a>
+<nav><a href="main.html"><img src="img/logo.svg" width="40" alt="На главную"></a><ul><li><a href="main.html">Главная</a></li><li><a href="info.html">Информация</a></li><li><a href="photo.html">Фото</a></li><li><a href="form.html" class=active>Форма</a></li><li><a href="passport.html">Паспорт</a></li><li><a href="table.html">Таблица</a></li><li><a href="task.html">Задача</a></li><li><a href="DOM.html">Считывание из DOM</a></li><li><a href="info.html#ch2">Глава 2 (закладка)</a></li><li><a href="https://mlp.fandom.com/" target="_blank" rel="noopener">Внешний сайт</a></li><li><a href="https://mlp.fandom.com/" target="_blank" rel="noopener"><img src="img/logo.svg" width="32" alt="Внешний сайт"></a></li></ul></nav>
+<main><h1>Форма</h1>
+
+<form action="https://example.com/submit" method="post">
+<fieldset><legend>Контактные данные</legend>
+<label>Фамилия <input type="text" name="surname" required></label>
+<label>Имя <input type="text" name="first_name" required></label>
+<label>Группа <input type="text" name="group_name" required></label>
+<label>Мобильный телефон <input type="tel" name="phone" required></label>
+<label>Электронная почта <input type="email" name="email" required></label>
+<label>Дата отправки <input type="date" name="send_date" id="sd" required></label>
+<button type="submit">Отправить</button></fieldset></form>
+<form action="https://example.com/submit" method="post">
+<fieldset><legend>Заказ фигурки пони</legend>
+<input type="hidden" name="shop_id" value="pony-shop-1">
+<label>Имя заказчика <input type="text" name="customer_name" value="Покупатель"></label>
+<label>Количество <input type="number" name="quantity" value="1" min="1" max="20"></label>
+<p>Героиня:</p>
+<label><input type="radio" name="pony" value="twilight" checked> Twilight Sparkle</label>
+<label><input type="radio" name="pony" value="rainbow"> Rainbow Dash</label>
+<label><input type="radio" name="pony" value="pinkie"> Pinkie Pie</label>
+<p>Дополнительно:</p>
+<label><input type="checkbox" name="gift_box" value="yes" checked> Подарочная упаковка</label>
+<label><input type="checkbox" name="card" value="yes"> Открытка</label>
+<label>Желаемая дата доставки <input type="date" name="delivery_date" value="2026-12-01"></label>
+<label>Пароль для отслеживания заказа <input type="password" name="order_password" value="1234"></label>
+<button type="submit">Заказать</button></fieldset></form>
+</main><script src="style.js"></script><script>document.getElementById("sd").value=new Date().toISOString().slice(0,10);</script></body></html>

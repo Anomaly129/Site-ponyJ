@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Задача 1007</title></head>
+<body><a id="top"></a>
+<nav><a href="main.html"><img src="img/logo.svg" width="40" alt="На главную"></a><ul><li><a href="main.html">Главная</a></li><li><a href="info.html">Информация</a></li><li><a href="photo.html">Фото</a></li><li><a href="form.html">Форма</a></li><li><a href="passport.html">Паспорт</a></li><li><a href="table.html">Таблица</a></li><li><a href="task.html" class=active>Задача</a></li><li><a href="DOM.html">Считывание из DOM</a></li><li><a href="info.html#ch2">Глава 2 (закладка)</a></li><li><a href="https://mlp.fandom.com/" target="_blank" rel="noopener">Внешний сайт</a></li><li><a href="https://mlp.fandom.com/" target="_blank" rel="noopener"><img src="img/logo.svg" width="32" alt="Внешний сайт"></a></li></ul></nav>
+<main><h1>Задача 1007</h1>
+<p>Есть куб с ребром A и цилиндр с высотой H и радиусом основания R. Определить, поместится ли жидкость объёма M в первую ёмкость, во вторую, в обе.</p>
+<form id="f" action="https://example.com/submit" method="post">
+<input type="hidden" name="task_text" value="Задача 1007: поместится ли жидкость объёма M в куб (ребро A), цилиндр (высота H, радиус R), в обе">
+<input type="hidden" name="result" id="res_h">
+<label>A (ребро куба) <input type="number" name="A" id="A" step="any"></label>
+<label>H (высота цилиндра) <input type="number" name="H" id="H" step="any"></label>
+<label>R (радиус цилиндра) <input type="number" name="R" id="R" step="any"></label>
+<label>M (объём жидкости) <input type="number" name="M" id="M" step="any"></label>
+<button type="button" id="calc">Решить</button>
+<button type="submit">Отправить на сервер</button>
+</form>
+<div id="res"></div>
+</main><script src="style.js"></script><script>
+var MODE=1; // 1: "в обе" = M <= V1+V2; 2: M помещается и в куб, и в цилиндр по отдельности
+document.getElementById("calc").onclick=function(){
+ var A=+A_.value,H=+H_.value,R=+R_.value,M=+M_.value,out;
+ if(!(A>0&&H>0&&R>0&&M>0)){out="Проверьте данные: все значения должны быть больше нуля"}
+ else{
+  var v1=A*A*A,v2=Math.PI*R*R*H;
+  var both=MODE==1?M<=v1+v2:(M<=v1&&M<=v2);
+  out="Объём куба: "+v1.toFixed(2)+"; объём цилиндра: "+v2.toFixed(2)+". В куб: "+(M<=v1?"да":"нет")+"; в цилиндр: "+(M<=v2?"да":"нет")+"; в обе: "+(both?"да":"нет");
+ }
+ document.getElementById("res").innerText=out;res_h.value=out;
+};
+var A_=document.getElementById("A"),H_=document.getElementById("H"),R_=document.getElementById("R"),M_=document.getElementById("M"),res_h=document.getElementById("res_h");
+</script></body></html>
