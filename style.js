@@ -34,6 +34,15 @@ st(".passport", {
     backgroundRepeat: "no-repeat",
     overflow: "hidden"
 });
+ var button = document.getElementById("change");
+
+if (button) {
+    button.onclick = function() {
+        document.getElementById("sn").textContent = "ivanov";
+        document.getElementById("fn").textContent = "ivan";
+        document.getElementById("pn").textContent = "ivanovich";
+    };
+}
 
  st(".passport img",{position:"absolute",left:"30px",top:"30px",width:"40px",height: 40px",objectFit:"cover"});
  st(".passport p",{position:"absolute",margin:"0",left:"450px",fontSize:"20px"});
