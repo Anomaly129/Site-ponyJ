@@ -34,6 +34,11 @@ st(".passport", {
     backgroundRepeat: "no-repeat",
     overflow: "hidden"
 });
+
+ st(".passport img",{position:"absolute",left:"30px",top:"30px",width:"40px",height: 40px",objectFit:"cover"});
+ st(".passport p",{position:"absolute",margin:"0",left:"450px",fontSize:"20px"});
+ document.querySelectorAll(".passport p").forEach(function(p,i){p.style.top=(50+i*50)+"px"});
+}
  var button = document.getElementById("change");
 
 if (button) {
@@ -42,9 +47,4 @@ if (button) {
         document.getElementById("imya").textContent = "ivan";
         document.getElementById("otc").textContent = "ivanovich";
     };
-}
-
- st(".passport img",{position:"absolute",left:"30px",top:"30px",width:"40px",height: 40px",objectFit:"cover"});
- st(".passport p",{position:"absolute",margin:"0",left:"450px",fontSize:"20px"});
- document.querySelectorAll(".passport p").forEach(function(p,i){p.style.top=(50+i*50)+"px"});
 }
