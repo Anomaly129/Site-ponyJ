@@ -23,8 +23,8 @@ st("input,select,button",{font:"inherit",padding:"4px"});
 st("fieldset",{margin:"16px 0"});
 var ps=document.querySelector(".passport");
 if(ps){
- st(".passport",{position:"relative",width:"900px",height:"900px",backgroundImage:"url(img/passport_blank.jpg)",maxWidth:"100%"});
- st(".passport img",{position:"absolute",left:"30px",top:"40px",width:"500px",height: 300px",objectFit:"cover"});
+ st(".passport",{position:"relative",width:"500px",height:"590px",backgroundImage:"url(img/passport_blank.jpg)",maxWidth:"100%"});
+ st(".passport img",{position:"absolute",left:"30px",top:"40px",width:"390px",height: 260px",objectFit:"cover"});
  st(".passport p",{position:"absolute",margin:"0",left:"450px",fontSize:"20px"});
  document.querySelectorAll(".passport p").forEach(function(p,i){p.style.top=(50+i*50)+"px"});
 }
