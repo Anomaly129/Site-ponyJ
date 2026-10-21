@@ -38,9 +38,9 @@ st(".passport", {
 
 if (button) {
     button.onclick = function() {
-        document.getElementById("sn").textContent = "ivanov";
-        document.getElementById("fn").textContent = "ivan";
-        document.getElementById("pn").textContent = "ivanovich";
+        document.getElementById("fam").textContent = "ivanov";
+        document.getElementById("imya").textContent = "ivan";
+        document.getElementById("otc").textContent = "ivanovich";
     };
 }
 
