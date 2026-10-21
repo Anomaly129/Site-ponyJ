@@ -24,7 +24,7 @@ st("fieldset",{margin:"16px 0"});
 var ps=document.querySelector(".passport");
 if(ps){
  st(".passport",{position:"relative",width:"500px",height:"590px",backgroundImage:"url(img/passport_blank.jpg)",maxWidth:"100%"});
- st(".passport img",{position:"absolute",left:"30px",top:"40px",width:"100px",height: 100px",objectFit:"cover"});
- st(".passport p",{position:"absolute",margin:"0",left:"450px",fontSize:"20px"});
+ st(".passport img",{position:"absolute",left:"30px",top:"30px",width:"100px",height: 100px",objectFit:"cover"});
+ st(".passport p",{position:"absolute",margin:"0",left:"450px",top:"30px",fontSize:"20px"});
  document.querySelectorAll(".passport p").forEach(function(p,i){p.style.top=(50+i*50)+"px"});
 }
