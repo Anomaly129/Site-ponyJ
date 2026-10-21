@@ -2,25 +2,67 @@
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Паспорт</title></head>
 <body><a id="top"></a>
-<nav><a href="main.html"><img src="img/logo.svg" width="40" alt="На главную"></a><ul><li><a href="main.html">Главная</a></li><li><a href="info.html">Информация</a></li><li><a href="photo.html">Фото</a></li><li><a href="form.html">Форма</a></li><li><a href="passport.html" class=active>Паспорт</a></li><li><a href="table.html">Таблица</a></li><li><a href="task.html">Задача</a></li><li><a href="DOM.html">Считывание из DOM</a></li><li><a href="info.html#ch2">Глава 2 (закладка)</a></li><li><a href="https://clck.ru/3WcS2k" target="_blank" rel="noopener">Внешний сайт</a></li><li><a href="https://clck.ru/3WcS2k" target="_blank" rel="noopener"><img src="img/logo.svg" width="32" alt="Внешний сайт"></a></li></ul></nav>
+<nav><a href="main.html"><img src="img/logo.jpg" width="40" alt="На главную"></a><ul><li><a href="main.html">Главная</a></li><li><a href="info.html">Информация</a></li><li><a href="photo.html">Фото</a></li><li><a href="form.html">Форма</a></li><li><a href="passport.html" class=active>Паспорт</a></li><li><a href="table.html">Таблица</a></li><li><a href="task.html">Задача</a></li><li><a href="DOM.html">Считывание из DOM</a></li><li><a href="info.html#ch2">Глава 2 (закладка)</a></li><li><a href="https://clck.ru/3WcS2k" target="_blank" rel="noopener">Внешний сайт</a></li><li><a href="https://clck.ru/3WcS2k" target="_blank" rel="noopener"><img src="img/logo.svg" width="32" alt="Внешний сайт"></a></li></ul></nav>
 <main><h1>Паспорт</h1>
 <div class="passport">
 <img src="img/photo.jpg" alt="Фото">
-<p><span>Фамилия:</span> <span id="sn">Иванов</span></p>
-<p><span>Имя:</span> <span id="fn">Иван</span></p>
-<p><span>Отчество:</span> <span id="pn">Иванович</span></p>
-<p><span>Год рождения:</span> <span id="by">2000</span></p>
-</div>
+   </style>
+    <title>Паспорт</title>
+      <style type="text/css">
+          body{
+              background-image: url(image/pass.jfif);
+            background-position: left 265px;
+            background-repeat: no-repeat;
+          }
+          .fam{
+            margin-left: 150px;
+            margin-top: 293px;
+          }
+          .imya{
+            margin-left: 140px;
+            margin-top: 22px;
+          }
+          .otc{
+            margin-left: 150px;
+            margin-top: 3px;
+          }
+          .date{
+            margin-left: 135px;
+            margin-top: 2px;
+          }
+          .img{
+            margin-left: 10px;
+            margin-top: -70px;
+          }
+          .date_vid{
+            margin-left: 65px;
+            margin-top: -324px;
+          }
+          .vid{
+            margin-left: 90px;
+            margin-top: -77px;
+          }
+          .place{
+            margin-left: 160px;
+            margin-top: 323px;
+          }
+          .button{
+            margin-left: 10px;
+            margin-top: 120px;
+          }
+      </style>
+  </head>
+  <body>
+<div class="fam">Иванов</div>
+<div class="imya">Иван</div>
+<div class="otc">Иванович</div>
+<div class="date"> Муж &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 01.01.2000 </div>
+<div class="img"> <img src="image/men.jpg" height="110" width="100"> </div>
+<div class="date_vid"> 01.01.2014&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;770-070 </div>
+<div class="vid"> ГУ МВД ПО Г.МОСКВЕ </div>
+<div class="place"> Г.МОСКВА </div>
+<button class="button" id="change"> Заменить </button>
 
-<button id="tr" type="button">Латиница</button>
-</main><script src="style.js"></script><script>
-var map={А:"A",Б:"B",В:"V",Г:"G",Д:"D",Е:"E",Ё:"E",Ж:"Zh",З:"Z",И:"I",Й:"Y",К:"K",Л:"L",М:"M",Н:"N",О:"O",П:"P",Р:"R",С:"S",Т:"T",У:"U",Ф:"F",Х:"Kh",Ц:"Ts",Ч:"Ch",Ш:"Sh",Щ:"Sch",Ы:"Y",Э:"E",Ю:"Yu",Я:"Ya",Ь:"",Ъ:""};
-function lat(s){var r="";for(var i=0;i<s.length;i++){var c=s[i],u=c.toUpperCase();if(map[u]!==undefined){var t=map[u];r+=(c===u)?t:t.toLowerCase()}else r+=c}return r}
-var orig={},ids=["sn","fn","pn"],on=false;
-ids.forEach(function(i){orig[i]=document.getElementById(i).innerText});
-document.getElementById("tr").onclick=function(){
- on=!on;
- ids.forEach(function(i){document.getElementById(i).innerText=on?lat(orig[i]):orig[i]});
- this.innerText=on?"Кириллица":"Латиница";
-};
-</script></body></html>
+</body>
+<script src = "./scripts/pass.js"> </script>
+</html>
