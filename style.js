@@ -17,7 +17,7 @@ st("figure",{margin:"12px 0"});
 st("figcaption",{fontSize:".9em",color:"#665a80"});
 st("table",{borderCollapse:"collapse"});
 st("td,th",{border:"1px solid #6b3fa0",padding:"8px"});
-st(".bgtable",{backgroundImage:"url(img/bg.svg)"});
+st(".bgtable",{backgroundImage:"url(img/bg.jpg)"});
 st("label",{display:"block",margin:"6px 0"});
 st("input,select,button",{font:"inherit",padding:"4px"});
 st("fieldset",{margin:"16px 0"});
